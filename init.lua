@@ -17,7 +17,7 @@ vim.o.showmode = false
 
 -- Schedule clipboard to avoid startup slowdown
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+	vim.o.clipboard = "unnamedplus"
 end)
 
 vim.o.breakindent = true
@@ -25,7 +25,7 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
@@ -35,9 +35,9 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 vim.o.cursorline = true
 
 vim.o.scrolloff = 10
@@ -58,9 +58,16 @@ vim.opt.smartindent = true
 vim.o.confirm = true
 
 -- Package Manager
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    vim.fn.system({'git', 'clone', '--filter=blob:none', '--branch=stable', 'https://github.com/folke/lazy.nvim.git', lazypath})
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"--branch=stable",
+		"https://github.com/folke/lazy.nvim.git",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -68,8 +75,7 @@ require("lazy").setup("plugins")
 
 -- Other configurations (keymaps, autocommands...)
 -- Loading key maps
-require('keymaps')
-require('autocmd')
+require("keymaps")
+require("autocmd")
 
-vim.cmd.colorscheme 'retrobox'
-
+vim.cmd.colorscheme("habamax")
