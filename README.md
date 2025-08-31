@@ -56,7 +56,7 @@ This is a comprehensive Neovim configuration that transforms Neovim into a power
 
 ### General
 - `<Esc>` - Clear search highlights
-- `<Esc><Esc>` - Exit terminal mode (in terminal)
+- `<leader>tt` - Toggle floating terminal
 
 ## 🚀 Functionalities
 
