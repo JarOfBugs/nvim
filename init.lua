@@ -77,5 +77,6 @@ require("lazy").setup("plugins")
 -- Loading key maps
 require("keymaps")
 require("autocmd")
+require("terminal")
 
 vim.cmd.colorscheme("habamax")
