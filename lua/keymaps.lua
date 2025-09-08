@@ -10,9 +10,6 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Save
 vim.keymap.set("n", "<leader>w", "<cmd>write<CR>", { desc = "[W]rite Current File" })
 
--- File navigation
-vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>", { desc = "[E]xplore current directory" })
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
@@ -23,3 +20,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
+
+vim.keymap.set("n", "<leader>q", "<cmd>qa<CR>", { desc = "Quit all windows" })
