@@ -149,6 +149,10 @@ This is a comprehensive Neovim configuration that transforms Neovim into a power
 
 4. **Wait for setup**: Lazy will automatically install all required plugins on first run
 
+5. **Markdown preview plugin** might need manual build if the automatic installation fails
+    ```bash
+    :Lazy build markdown-preview.nvim
+    ```
 ## 🔧 Customization
 
 The configuration is modular and easy to customize:
